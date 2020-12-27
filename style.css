@@ -65,7 +65,7 @@ height: 100vh;
 }
 #sideNav{
     width: 250px;
-    height: 100vh;
+    height: 100vh/2;
     position: fixed;
     right: -250px;
     top: 0;
