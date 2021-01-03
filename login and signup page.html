@@ -30,7 +30,7 @@
                 <input type="text" class="input-field" placeholder="User Id" required>
                 <input type="email" class="input-field" placeholder="Email Id" required>
                 <input type="text" class="input-field" placeholder="Enter Password" required>
-                <input type="checkbox" class="check-box"><span> I Agree To The Terms & Conditions </span>
+                <input type="checkbox" class="check-box" required><span> I Agree To The Terms & Conditions </span>
                 <button type="submit" class="submit-btn"> Sign Up </button>
   
             </form>
@@ -42,8 +42,14 @@
         var x = document.getElementById("login");
         var y = document.getElementById("signup");
         var z = document.getElementById("btn");
+        var url = window.location.href
+        var query = url.slice(url.indexOf("?") + 1 )
+        if(query.indexOf("LOGIN") >= 0)
+            login()
+        else if(query.indexOf("SIGNUP") >= 0)
+            signup()
 
-            function signup(){
+        function signup(){
             x.style.left = "-400px";
             y.style.left = "50px";
             z.style.left = "110px";
